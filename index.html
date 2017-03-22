@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style type="text/css">
+           html {
+               margin: 40px;
+               border-style: groove;
+               border-width: 20px;
+               border-color: DarkSeaGreen;
+           }
+           body{
+               font-family: 'NTR', sans-serif;
+           }
+           
+           p{
+               text-align: justify;
+               line-height: 7mm;
+               font-size: 130%;
+               
+           } 
+           img{
+               display: block;
+               margin: 0 auto 0 auto;
+           }
+           a{
+               text-decoration: none;
+           }
+           .button{
+               color: darkgreen;
+               background:  linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+               font-weight: 100;
+               font-size: 15px;
+               font-family: 'Baloo Bhaina', cursive;
+               text-align: center;
+               border: solid 2px;
+               border-radius: 10px;
+               -webkit-transition-duration: 250ms;
+               transition-duration: 250ms;
+               box-shadow: 0px 5px 0px darkgreen;
+               transition: all .ls linear;
+               position: relative;
+               left: 30px;
+               top: 30px;
+           }
+           .button:hover{
+               background-color: #7CFC00;
+               box-shadow: 0px 1px 4px 3px yellowgreen;
+               cursor: pointer;
+               letter-spacing: 2px;
+           }
+           #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 100px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  transition-duration: 200ms;
+  transition: all .ls linear;
+  box-shadow: 0px 5px 0px #FFA500;
+  background-color: #FF4500;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#myBtn:hover {
+  background-color: #C0C0C0;
+    color:black;
+    cursor: grab;
+}
+           .u{
+               color: black;
+           }
+           
+        
+       </style>
+        
+    </head>
+    <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> <b> Go to Top </b></button>
+        <h1 align="center" style="color:#e65c00"> A Practical Approach to Datawarehousing and SQL </h1>
+    
+       <link href="https://fonts.googleapis.com/css?family=NTR" rel="stylesheet">
+       
+           <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+           <a href="#DW" class="button"> DataWarehousing Fundamentals </a> 
+           <a href="#SQL Operators" class="button" style="margin-left:80px"> SQL Operators </a> <br> <br>
+           <a href="#SQL Basics" class="button"> SQL Basics </a> 
+           <a href="#SQL Functions" class="button" style="margin-left:230px"> SQL Functions </a> <br> <br>
+           <a href="#SQL Commands" class="button"> SQL Commands </a> <br> <br>
+           <a href="#SQL Syntax" class="button"> SQL Syntax </a> <br> <br>
+            
+          
+        
+        <br>
+        <br>
+        <div>
+        <h2 style="color:#00004d"> <a name="DW"> Data Warehousing Fundamentals </a> </h2>
+        <img src="http://i.imgur.com/yYerWkV.jpg" alt="Illustration of Datawarehouse Elements" width="800" height="450">
+        <p>  <b> Data warehousing </b> is a collection of methods, techniques and tools for supporting managers and business analysts to conduct data analysis that in turn helps them to take better decisions on their business. <br> <br>
+<b>Data </b> is a collection of facts and figures where it may be integer, decimal, character, strings, float values, date, time whatever that can be processed to produce information. For example, if we have data about marks obtained by all students, we can then conclude about toppers and average marks. Data is normally stored in tables in a Relational Database Management System. <br> <br>
+<b> Database Management System </b> also called as DBMS that is what MS SQL, MySQL, ORACLE, MariaDB there is a whole bunch of things out there. So, the DBMS is a system software for creating, retrieving, updating and managing Databases in a systematic way. 
+And sometimes people may need <b> Database Application </b> which is the PHP MyAdmin or MySQL workbench. They are the interface used to interact with the data in that database. <br> <br>
+<b> Data warehouse </b>  is a huge repository, we can relate it to a huge tank that stores water from various water sources. Similarly, the Data warehouse integrates data from multiple data sources. It supports business analysis and decision making. Data Warehouse is of course a database, but it contains summarized, well organized, meaningful information in it. 
+Data warehouse is basically consisting of "consolidated data" from various source systems. Here, the consolidated data refers to the collection and integration of data or we can call it as a combined data from multiple sources into a single destination. During the consolidation process, large amount of data sources is put together into a single data storage. <br> 
+Moreover, the data stored in Data warehouse scales up over a period of time and generally speaking the data contained in the Data warehouse is nonvolatile. <br> <br>
+<b> Data Mart </b>  is a subset of Data warehouse with a range restricted to a specific business area, category of users or corporate department. For example, face book could store only status, updates or photos in a data mart that meets the immediate requirement of data, whereas entire profiles would be stored in a Data warehouse.
+We know that the Data warehouse is a single integrated storehouse of data that covers a wide range of data from various business units such as finance, logistics, marketing and customer support. Data warehouse which holds the enterprise level data cannot be accessed directly by all the people. But, a person who is sitting top of all these systems - say a manager can access all of it to get a summarized view of data. A Data mart in contrast, is meant for direct access by end users and end user tools. Thus, the individual departments have their own specific data where a sales team can view their monthly sales data or a finance team can view financial need for upcoming year through the data mart. 
+The main benefit of data mart is, we can access and fetch the data easily and quickly. <br> <br>
+A <b> database </b> is a collection of data that is organized in a structured way. So what does that mean? 
+For example, in our mobile phone we have an orderly arranged database which are stored in our phone’s memory. That is, in our phone contact, each person’s name is stored in an alphabetical order that makes us easier to find a friend’s name. We also store that information in our google account so that it never gets lost. Other example for databases are bank money transactions, stock control, travel booking systems and personal records. <br><br>
+<b> Why do we need to have a Database? </b> <br> 
+We need database to permanently store the information so that we can access and retrieve the data whenever needed. For example, the Google server maintains our username and password. When we try to login into our email account, it will check the input data what we gave with its already stored database and allows us to login if everything matches with its database. So, the data should be readily available. We can’t store millions of users and their details in Notepad. Example, if anyone asks us, how many users are there in Facebook from India? To answer this question, we need a database. 
+Therefore, the database is used to store the data long term persistently. The performance of the database depends upon how good database design is and how well the database is maintained. The database services, security, backup recovery vary with the companies. <br> <br>
+
+There are two common <b> database structures</b>  OLTP and OLAP. What do they mean by?
+Each serves a different purpose. The OLTP systems provide source data to Data warehouses whereas OLAP systems help to analyze it.  
+OLTP is the short term for OnLine Transactional Processing which supports day-to-day business operations. The original source of data which is in the raw form comes from OLTP databases. Everyday many transactions would happen in OLTP by performing INSERT, UPDATE, DELETE operations. A transaction will be done, when we withdraw cash from a bank ATM and a transaction will be created when we reserve an airline ticket. That means more queries would be used here. The technical term for operational database is OLTP. 
+OLAP stands for OnLine Analytical Processing. We can access the operational as well as historical data through OLAP. OLAP applications tell an organization what needs to be done by analyzing the data and it helps managers to take decisions by generating reports. Some of the Business Intelligence and visualization tools available are Tableau, Qlik View, Qlik sense, Pentaho Business intelligence, SAP Business intelligence, Birst, Microsfot Sharepoint etc. Using OLAP tool, we can see what is the most sold product in last month if we own an online store. Most important thing is, OLAP tools are Read only, because unlike OLTP we can’t update or modify anything with OLAP tools. Update or modify is only possible in OLTP. The technical term for Consolidated database is OLAP. 
+<br> <br>
+<b> ETL </b>  stands for Extraction, Transformation and Loading. The process of extracting data from source systems and bringing it into the data warehouse is commonly called ETL. 
+ETL is the mostly used data integration process used by IT and analytics teams. About 70 – 80% of data integration project is relying on ETL Process. Extract means pulling the data from source system as efficiently as possible. Transformation is the process of manipulating the data. It may involve applying business rules, data cleansing, filtering, splitting columns, joining data from multiple sources, transposing rows and columns, data validation etc. Loading involves moving data to the target storage such as Data warehouse. 
+The 1st step in ETL process is mapping the data between source systems and target database. The 2nd step is cleansing of source data in staging area. The 3rd step is transforming cleansed source data and then loading into the target system.  
+An ETL tool such as Talend, Informatica, data stage, Oracle warehouse builder etc., which are designed to extract data from numerous databases, transforms that is converts raw data into relational data and load the data into data marts or data warehouses. 
+Any typical data warehouse generally has three distinct areas: Source, Stage and target. 
+Source systems such as Oracle & MS SQL databases provide the data. 
+Staging area is a place where data is processed before entering the data warehouse. In staging, temporary tables can be placed on data warehouse server where data transformation activities take place. We basically need staging area to hold the data, and perform data cleansing and merging, before loading the data into warehouse. Without staging we can't do modify, filter, cleansing as per my knowledge. 
+Data cleansing is the process of resolving inconsistencies and fixing the anomalies in the source data.  
+
+         </p>
+        
+        <h2 style="color:#00004d"> <a name="SQL Basics"> SQL Basics </a> </h2>
+        
+        <p>  
+        SQL (Structured Query Language) is a standard language for RDBMS which is used to communicate  with a database.  <br> Communicate = Accessing and Manipulating data) <br> <br>
+       
+        <b> What can SQL do?</b> <br>
+        Using SQL we can execute queries to retrieve data from a database.<br>
+         SQL can insert data into a database. <br> SQL can update and delete records in a database. <br> SQL can create new databases, create new tables, stored procedures and views in them. <br> SQL can set permissions on tables, procedures and views. 
+        <br> <br>
+        <b> Using SQL in Your Website </b>
+        <br>
+        To build a website that shows some data from a database, you will need the following: <br>
+        An RDBMS database program (i.e. MS Access, SQL Server, MySQL) <br>
+        A server-side scripting language like PHP or ASP .net <br>
+        SQL <br>
+        HTML/CSS <br> <br>
+        <b> RDBMS</b> <br>
+        
+        RDBMS stands for Relational Database Management System. <br>
+        RDBMS is the basis for modern database systems like MS SQL Server, MySQL, IBM DB2, Oracle etc. <br>
+        The data in RDBMS is stored in database objects called Tables. A <b> Table </b> is a collection of related data entries and it consists of Columns and Rows. Columns can also be called as atributes or simply fields and the Rows can also be called as Records. <br> <br></p>
+        <h2 style="color:#00004d"> <a name="SQL Commands"> SQL Syntax </a> </h2>
+        <img src="http://i.imgur.com/6GlgbzU.jpg" alt="SQL Commands" align="left" width="500" height="450"> <br> <br>
+        <img src="http://i.imgur.com/etfpJKP.jpg" alt="SQL Commands" align="left" width="600" height="600"> <br> <br> <br>
+         <img src="http://i.imgur.com/NZDGDfM.jpg" alt="SQL Queries" width="300" height="500"> <br>
+        
+        
+        <h2 style="color:#00004d"> <a name="SQL Syntax"> SQL Syntax </a> </h2>
+        <b> Create Statement</b>
+         <p> We need a database to store our data. The CREATE DATABASE
+            command syntax is as follows,<br>
+            <font color="Blue"> CREATE DATABASE database_name;</font> <br> <br>
+            <b> Create a Table </b> <br>
+            The CREATE TABLE statement is used to create a new table in a database. <br> <br>
+            <b> SQL Syntax for Creating a Table</b> <br>
+             <font color="Blue"> CREATE TABLE table_name (<br> column1 datatype, column2 datatype,column3 datatype,...);<br> </font> <br> For ex, <br> 
+         <font color="darkgreen">    CREATE TABLE Customers (<br>
+    CustomerID int NOT NULL PRIMARY KEY, <br>
+    FirstName varchar(255),<br>
+    LastName varchar(255),<br>
+    Address varchar(255),<br>
+    City varchar(255) <br>
+             ); </font><br> <br> varchar is a data type having variable length string upto n characters. When creating a table, you should always add a primary key, even though a primary key is optional. A primary key is a column or a set of columns that uniquely identify every row in the table. <br> <br>
+            
+        <b> SELECT Statement</b><br> 
+          
+          The SELECT statement is used to select data from a database. The data returned is stored in a result table, called the result-set.<br> <br><img src="http://i.imgur.com/9kt9csu.jpg" alt="SELECT clauses"> <br> <br>
+        Therefore, the SELECT statement retrieves the columns specified in the table of the interest. The <b> WHERE clause </b> is used to filter the rows that match our search condition. If we omit WHERE clause, then the distinct rows cannot be retrieved that is desired data cannot be fetched. The <b> ORDER BY clause </b> sorts the rows in specified sequence.  <br><br>
+        <b> SELECT Syntax</b><br><br>
+        <font color="Blue"> SELECT column1, column2, ...<br>
+        FROM table_name; </font> <br> <br> 
+            Here, column1, column2, ... are the field names of the table you want to select data from. <br> 
+            For ex, <br>
+            <font color="darkgreen"> SELECT CustomerName, City <br> FROM Customers; </font> <br> <br> 
+            If you want to select all the fields available in the table, use the following syntax:<br> <font color="Blue"> SELECT * FROM table_name; </font> (The <b> * symbol</b> indicates that all the columns should be retrieved.) <br> 
+             
+            For ex, <br>
+            <font color="darkgreen"> SELECT * FROM Customers; </font> <br> <br>
+            <b> Data Changing Commands </b><br> The following commands are used to change data in tables in a database. <br> 
+             <font color="blue">  <strong> INSERT </strong> </font> command is used to add new records to a table. <br> <font color="blue"><strong> UPDATE </strong></font> command allows changes to one or more records in a table.<br> <font color="blue"><strong> DELETE </strong></font> command deletes one or more records from a table. <br> <br>
+            
+            <b> Adding Data into a Table </b><br>
+            Once you created a table, you can add data to it using the INSERT statement. <br><br>
+The syntax for the INSERT statement is as follows, <br> 
+<font color="Blue">INSERT INTO table (column1,<br>
+column2,<br>
+... )<br>
+VALUES (value1,<br>
+    value2,... );</font><br> <br>
+       For ex, <br>
+      <font color="darkgreen"> INSERT INTO Customers <br>
+( CustomerID, FirstName, LastName, Address, City) <br>
+          VALUES ( 1, 'Albert', 'John', '21 North Street', 'Glasgow'); </font><br>
+           </p>
+<h2 style="color:#00004d"> <a name="SQL Operators"> SQL Operators </a> </h2>
+       <li> Arithmatic Operators </li> 
+       <li> Bitwise Operators </li>
+       <li> Comparison Operators </li>
+       <li> Compound Operators </li>
+       <li> Logical Operators </li> <br>
+<h2 style="color:#00004d"> <a name="SQL Functions"> SQL Functions </a> </h2>
+       <li> Aggregate Functions </li>
+       <li> String Functions </li>
+        </div>
+        
+        
+        
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+    </body>
+</html>
